@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31912.275
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitTesting", "UnitTesting\UnitTesting.csproj", "{E9A4C8AF-E442-4E5E-AC8C-7476F74F8C80}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IntegrationTesting", "IntegrationTesting\IntegrationTesting.csproj", "{9B42C168-5F37-4D79-B1F0-2DFD5C971504}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Github", "Github", "{DB945B33-0329-4CED-B7A5-7B41AB37F856}"
+	ProjectSection(SolutionItems) = preProject
+		.github\workflows\publish-nuget-packages.yml = .github\workflows\publish-nuget-packages.yml
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E9A4C8AF-E442-4E5E-AC8C-7476F74F8C80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9A4C8AF-E442-4E5E-AC8C-7476F74F8C80}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9A4C8AF-E442-4E5E-AC8C-7476F74F8C80}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9A4C8AF-E442-4E5E-AC8C-7476F74F8C80}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B42C168-5F37-4D79-B1F0-2DFD5C971504}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B42C168-5F37-4D79-B1F0-2DFD5C971504}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B42C168-5F37-4D79-B1F0-2DFD5C971504}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B42C168-5F37-4D79-B1F0-2DFD5C971504}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8517A11B-4E4F-43B3-A54F-A217788C6E7C}
+	EndGlobalSection
+EndGlobal
