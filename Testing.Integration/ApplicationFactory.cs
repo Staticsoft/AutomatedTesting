@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Mvc.Testing;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Staticsoft.IntegrationTesting
+namespace Staticsoft.Testing.Integration
 {
     internal class ApplicationFactory<TStartup> : WebApplicationFactory<TStartup>
         where TStartup : class

@@ -1,8 +1,7 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using Staticsoft.Testing;
 using Xunit;
 
-namespace Staticsoft.UnitTesting.Tests
+namespace Staticsoft.Testing.Unit.Tests
 {
     public class TestBaseTests : TestBase<SUT, SUTDependencies>
     {

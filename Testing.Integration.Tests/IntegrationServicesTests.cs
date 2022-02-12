@@ -1,12 +1,11 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using Staticsoft.Testing;
 using Staticsoft.TestServer;
 using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace Staticsoft.IntegrationTesting.Tests
+namespace Staticsoft.Testing.Integration.Tests
 {
     public class IntegrationServicesTests : TestBase<IntegrationServices>
     {
