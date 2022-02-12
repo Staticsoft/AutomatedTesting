@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31912.275
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitTesting", "UnitTesting\UnitTesting.csproj", "{E9A4C8AF-E442-4E5E-AC8C-7476F74F8C80}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Testing.Unit", "Testing.Unit\Testing.Unit.csproj", "{E9A4C8AF-E442-4E5E-AC8C-7476F74F8C80}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IntegrationTesting", "IntegrationTesting\IntegrationTesting.csproj", "{9B42C168-5F37-4D79-B1F0-2DFD5C971504}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Testing.Integration", "Testing.Integration\Testing.Integration.csproj", "{9B42C168-5F37-4D79-B1F0-2DFD5C971504}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitTesting.Tests", "UnitTesting.Tests\UnitTesting.Tests.csproj", "{553D79A9-B8AD-4847-AA8A-D51DAE3B60EE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Testing.Unit.Tests", "Testing.Unit.Tests\Testing.Unit.Tests.csproj", "{553D79A9-B8AD-4847-AA8A-D51DAE3B60EE}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IntegrationTesting.Tests", "IntegrationTesting.Tests\IntegrationTesting.Tests.csproj", "{2E3168F1-1A24-4EF7-9429-EBB4AE87E124}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Testing.Integration.Tests", "Testing.Integration.Tests\Testing.Integration.Tests.csproj", "{2E3168F1-1A24-4EF7-9429-EBB4AE87E124}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestServer", "TestServer\TestServer.csproj", "{A0DEBDA4-105C-4D86-AF21-98CF3039251E}"
 EndProject
@@ -18,7 +18,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Github", "Github", "{DB945B
 		.github\workflows\run-tests.yml = .github\workflows\run-tests.yml
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Testing", "Testing\Testing.csproj", "{252003A9-98A8-43E3-8DF7-6B58A07B351D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Testing.Abstractions", "Testing.Abstractions\Testing.Abstractions.csproj", "{252003A9-98A8-43E3-8DF7-6B58A07B351D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
