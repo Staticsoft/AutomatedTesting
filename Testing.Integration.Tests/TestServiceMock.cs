@@ -1,6 +1,6 @@
 ﻿using Staticsoft.TestServer;
 
-namespace Staticsoft.IntegrationTesting.Tests
+namespace Staticsoft.Testing.Integration.Tests
 {
     public class TestServiceMock : TestService
     {

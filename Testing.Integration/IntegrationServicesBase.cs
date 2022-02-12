@@ -1,5 +1,5 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using Staticsoft.IntegrationTesting;
+using Staticsoft.Testing.Integration;
 using System;
 
 namespace Staticsoft.Testing
