@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFrameworks>net60;netcoreapp3.1</TargetFrameworks>
@@ -21,8 +21,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\IntegrationTesting\IntegrationTesting.csproj" />
-    <ProjectReference Include="..\TestServer\TestServer.csproj" />
+    <ProjectReference Include="..\Testing.Unit\Testing.Unit.csproj" />
   </ItemGroup>
 
 </Project>

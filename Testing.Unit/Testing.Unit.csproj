@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFrameworks>net60;netcoreapp3.1</TargetFrameworks>
@@ -14,12 +14,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Condition="'$(TargetFramework)' == 'net60'" Include="Microsoft.AspNetCore.Mvc.Testing" Version="6.0.1" />
-    <PackageReference Condition="'$(TargetFramework)' == 'netcoreapp3.1'" Include="Microsoft.AspNetCore.Mvc.Testing" Version="3.1.22" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\Testing\Testing.csproj" />
+    <ProjectReference Include="..\Testing.Abstractions\Testing.Abstractions.csproj" />
   </ItemGroup>
 
 </Project>
