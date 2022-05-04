@@ -13,7 +13,7 @@ namespace Staticsoft.Testing.Integration
             => ServiceCollection = serviceCollection;
 
         protected override void ConfigureWebHost(IWebHostBuilder builder)
-            => builder.UseStartup<TStartup>().ConfigureServices(services =>
+            => builder.ConfigureServices(services =>
             {
                 foreach (var service in ServiceCollection)
                 {
