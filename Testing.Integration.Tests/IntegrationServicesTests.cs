@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Staticsoft.TestServer;
+using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
@@ -10,6 +11,13 @@ namespace Staticsoft.Testing.Integration.Tests
     public class IntegrationServicesTests : TestBase<IntegrationServices>
     {
         [Fact]
+        public void RegisteresServicesOnlyOnce()
+        {
+            AssertRegisteredOnce<IServiceCollection>();
+            AssertRegisteredOnce<TestService>();
+        }
+
+        [Fact]
         public async Task CanMakeRequestToServer()
         {
             var testResponse = "TestResponse";
@@ -19,6 +27,9 @@ namespace Staticsoft.Testing.Integration.Tests
             var message = await ReadResponseBody(response);
             Assert.Equal(testResponse, message);
         }
+
+        void AssertRegisteredOnce<T>()
+            => Assert.Single(Get<IServiceCollection>().Where(service => service.ServiceType == typeof(T)));
 
         void SetResponseBody(string testResponse)
             => Get<TestService>().SetTestResponse(testResponse);

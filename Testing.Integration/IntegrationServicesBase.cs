@@ -4,7 +4,7 @@ using System;
 
 namespace Staticsoft.Testing
 {
-    public abstract class IntegrationServicesBase<TStartup> : ServiceProviderFactory
+    public class IntegrationServicesBase<TStartup> : ServiceProviderFactory
         where TStartup : class
     {
         readonly ApplicationFactory<TStartup> Factory;

@@ -7,6 +7,7 @@ namespace Staticsoft.TestServer
     public class TestStartup
     {
         public void ConfigureServices(IServiceCollection services) => services
+            .AddSingleton(services)
             .AddControllers();
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment _) => app
