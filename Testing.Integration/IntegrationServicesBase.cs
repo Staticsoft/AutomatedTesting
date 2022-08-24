@@ -16,6 +16,7 @@ namespace Staticsoft.Testing
             => Factory.Services;
 
         protected virtual IServiceCollection Services => new ServiceCollection()
-            .AddSingleton(_ => Factory.CreateClient());
+            .AddSingleton(_ => Factory.CreateClient())
+            .AddSingleton(_ => Factory.Server.CreateWebSocketClient());
     }
 }
