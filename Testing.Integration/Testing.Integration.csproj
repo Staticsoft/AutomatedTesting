@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>net60;netcoreapp3.1</TargetFrameworks>
+    <TargetFrameworks>net60</TargetFrameworks>
     <LangVersion>latest</LangVersion>
     <RootNamespace>Staticsoft.$(MSBuildProjectName)</RootNamespace>
   </PropertyGroup>
@@ -14,8 +14,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Condition="'$(TargetFramework)' == 'net60'" Include="Microsoft.AspNetCore.Mvc.Testing" Version="6.0.1" />
-    <PackageReference Condition="'$(TargetFramework)' == 'netcoreapp3.1'" Include="Microsoft.AspNetCore.Mvc.Testing" Version="3.1.22" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" Version="6.0.1" />
   </ItemGroup>
 
   <ItemGroup>
