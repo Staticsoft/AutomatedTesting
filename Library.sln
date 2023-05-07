@@ -18,8 +18,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Github", "Github", "{DB945B
 		.github\workflows\run-tests.yml = .github\workflows\run-tests.yml
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Testing.Abstractions", "Testing.Abstractions\Testing.Abstractions.csproj", "{252003A9-98A8-43E3-8DF7-6B58A07B351D}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -46,10 +44,6 @@ Global
 		{A0DEBDA4-105C-4D86-AF21-98CF3039251E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A0DEBDA4-105C-4D86-AF21-98CF3039251E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A0DEBDA4-105C-4D86-AF21-98CF3039251E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{252003A9-98A8-43E3-8DF7-6B58A07B351D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{252003A9-98A8-43E3-8DF7-6B58A07B351D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{252003A9-98A8-43E3-8DF7-6B58A07B351D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{252003A9-98A8-43E3-8DF7-6B58A07B351D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
