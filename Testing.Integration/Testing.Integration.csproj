@@ -17,8 +17,4 @@
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" Version="6.0.1" />
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\Testing.Abstractions\Testing.Abstractions.csproj" />
-  </ItemGroup>
-
 </Project>

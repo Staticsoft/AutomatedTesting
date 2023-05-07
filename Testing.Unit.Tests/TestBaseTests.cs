@@ -3,8 +3,12 @@ using Xunit;
 
 namespace Staticsoft.Testing.Unit.Tests
 {
-    public class TestBaseTests : TestBase<SUT, SUTDependencies>
+    public class TestBaseTests : TestBase<SUT>
     {
+        protected override IServiceCollection Services => base.Services
+            .AddSingleton<Dependency>()
+            .AddSingleton<SUT>();
+
         [Fact]
         public void CanGetDependency()
         {
@@ -22,13 +26,6 @@ namespace Staticsoft.Testing.Unit.Tests
         {
             Assert.Equal(42, SUT.GetMagicNumber());
         }
-    }
-
-    public class SUTDependencies : UnitServicesBase
-    {
-        protected override IServiceCollection Services => base.Services
-            .AddSingleton<Dependency>()
-            .AddSingleton<SUT>();
     }
 
     public class SUT

@@ -8,8 +8,11 @@ using Xunit;
 
 namespace Staticsoft.Testing.Integration.Tests
 {
-    public class IntegrationServicesTests : TestBase<IntegrationServices>
+    public class IntegrationServicesTests : IntegrationTestBase<TestStartup>
     {
+        protected override IServiceCollection ServerServices(IServiceCollection services) => base.ServerServices(services)
+            .AddSingleton<TestService, TestServiceMock>();
+
         [Fact]
         public void RegisteresServicesOnlyOnce()
         {
@@ -29,21 +32,15 @@ namespace Staticsoft.Testing.Integration.Tests
         }
 
         void AssertRegisteredOnce<T>()
-            => Assert.Single(Get<IServiceCollection>().Where(service => service.ServiceType == typeof(T)));
+            => Assert.Single(Server<IServiceCollection>().Where(service => service.ServiceType == typeof(T)));
 
         void SetResponseBody(string testResponse)
-            => Get<TestService>().SetTestResponse(testResponse);
+            => Server<TestService>().SetTestResponse(testResponse);
 
         Task<HttpResponseMessage> MakeRequest()
-            => Get<HttpClient>().GetAsync("/TestRequest");
+            => Client<HttpClient>().GetAsync("/TestRequest");
 
         static Task<string> ReadResponseBody(HttpResponseMessage response)
             => response.Content.ReadAsStringAsync();
-    }
-
-    public class IntegrationServices : IntegrationServicesBase<TestStartup>
-    {
-        protected override IServiceCollection Services => base.Services
-            .AddSingleton<TestService, TestServiceMock>();
     }
 }
