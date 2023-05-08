@@ -1,15 +1,14 @@
 ﻿using Staticsoft.TestServer;
 
-namespace Staticsoft.Testing.Integration.Tests
+namespace Staticsoft.Testing.Integration.Tests;
+
+public class TestServiceMock : TestService
 {
-    public class TestServiceMock : TestService
-    {
-        string Body = string.Empty;
+    string Body = string.Empty;
 
-        public string ReturnTestResponse()
-            => Body;
+    public string ReturnTestResponse()
+        => Body;
 
-        public void SetTestResponse(string body)
-            => Body = body;
-    }
+    public void SetTestResponse(string body)
+        => Body = body;
 }

@@ -1,8 +1,7 @@
-﻿namespace Staticsoft.TestServer
+﻿namespace Staticsoft.TestServer;
+
+public interface TestService
 {
-    public interface TestService
-    {
-        void SetTestResponse(string message);
-        string ReturnTestResponse();
-    }
+    void SetTestResponse(string message);
+    string ReturnTestResponse();
 }

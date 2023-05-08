@@ -3,17 +3,16 @@ using Microsoft.AspNetCore.Mvc.Testing;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 
-namespace Staticsoft.Testing.Integration
+namespace Staticsoft.Testing.Integration;
+
+internal class ApplicationFactory<TStartup> : WebApplicationFactory<TStartup>
+    where TStartup : class
 {
-    internal class ApplicationFactory<TStartup> : WebApplicationFactory<TStartup>
-        where TStartup : class
-    {
-        readonly Func<IServiceCollection, IServiceCollection> Register;
+    readonly Func<IServiceCollection, IServiceCollection> Register;
 
-        public ApplicationFactory(Func<IServiceCollection, IServiceCollection> register)
-            => Register = register;
+    public ApplicationFactory(Func<IServiceCollection, IServiceCollection> register)
+        => Register = register;
 
-        protected override void ConfigureWebHost(IWebHostBuilder builder)
-            => builder.ConfigureServices(services => Register(services));
-    }
+    protected override void ConfigureWebHost(IWebHostBuilder builder)
+        => builder.ConfigureServices(services => Register(services));
 }
