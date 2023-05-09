@@ -20,9 +20,6 @@ public class TestBase
 public class TestBase<SystemUnderTest> : TestBase
     where SystemUnderTest : class
 {
-    protected override IServiceCollection Services => base.Services
-        .AddSingleton<SystemUnderTest>();
-
     protected SystemUnderTest SUT
         => Get<SystemUnderTest>();
 }
